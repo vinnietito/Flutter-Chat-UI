@@ -28,14 +28,14 @@ final User james =
 final User john = User(id: 3, name: 'John', imageUrl: 'assets/images/john.jpg');
 final User olivia =
     User(id: 4, name: 'Olivia', imageUrl: 'assets/images/olivia.jpg');
-final User sam = User(id: 5, name: 'Sam', imageUrl: 'assets/images/sam.jpg');
+final User vin = User(id: 5, name: 'Sam', imageUrl: 'assets/images/sam.jpg');
 final User sophia =
     User(id: 6, name: 'Sophia', imageUrl: 'assets/images/sophia.jpg');
 final User steven =
     User(id: 7, name: 'Steven', imageUrl: 'assets/images/steven.jpg');
 
 // FAVORITE CONTACTS
-List<User> favorites = [sam, steven, olivia, john, greg];
+List<User> favorites = [vin, steven, olivia, john, greg];
 
 // EXAMPLE CHATS ON HOME SCREEN
 List<Message> chats = [
@@ -75,7 +75,7 @@ List<Message> chats = [
     unread: false,
   ),
   Message(
-    sender: sam,
+    sender: vin,
     time: '12:30 PM',
     text: 'Hey, how\'s it going? What did you do today?',
     isLiked: false,
