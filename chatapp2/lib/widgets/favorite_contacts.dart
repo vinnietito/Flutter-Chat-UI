@@ -37,9 +37,11 @@ const FavoriteContacts({super.key});
           height: 120.0,
           color: Colors.blue,
           child: ListView.builder(
+            padding: EdgeInsets.only(left: 10.0),
+            scrollDirection: Axis.horizontal,
             itemCount: favorites.length,
             itemBuilder: (BuildContext context, int index) {
-              return ;
+              return Text(favorites[index].name);
             }
             
             ),
