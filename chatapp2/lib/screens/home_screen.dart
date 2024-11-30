@@ -25,12 +25,13 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(
             fontSize: 28.0,
             fontWeight: FontWeight.bold,
+            color: Colors.white, // Title text color
           ),
         ),
         actions: [
           // Adding the search icon here
           IconButton(
-            icon: const Icon(Icons.search), // This is your search icon
+            icon: const Icon(Icons.search),
             iconSize: 30.0,
             color: Colors.white,
             onPressed: () {
@@ -43,18 +44,20 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         children: <Widget>[
           const CategorySelector(),
-          Container(
-            height: 500.0,
-            decoration: BoxDecoration(
-              color: Theme.of(context).accentColor,
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(30.0),
-                topRight: Radius.circular(30.0),
+          Expanded(
+            child: Container(
+              height: 500.0,
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondary == null
+                    ? Colors.white // Fallback to white if secondary color is not defined
+                    : Theme.of(context).colorScheme.secondary, // Use secondary color from theme
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(30.0),
+                  topRight: Radius.circular(30.0),
+                ),
               ),
             ),
-
-            ),
-          
+          ),
         ],
       ),
     );
