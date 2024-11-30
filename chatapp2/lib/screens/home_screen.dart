@@ -38,7 +38,12 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: const Center(child: Text('Home Screen Content')),
+      body: Column(children: <Widget>[
+        Container(height: 90.0,
+        color: Colors.blue,
+        ),
+      ],
+      ),
     );
   }
 }
