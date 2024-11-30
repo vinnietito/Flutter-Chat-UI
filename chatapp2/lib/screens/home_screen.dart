@@ -1,7 +1,6 @@
 import 'package:chatapp2/widgets/category_selector.dart';
 import 'package:flutter/material.dart';
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -14,7 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).primaryColor, // Ensures AppBar is red
+        backgroundColor: Theme.of(context).primaryColor, // AppBar red color
         leading: IconButton(
           icon: const Icon(Icons.menu),
           iconSize: 30.0,
@@ -28,6 +27,18 @@ class _HomeScreenState extends State<HomeScreen> {
             fontWeight: FontWeight.bold,
           ),
         ),
+        actions: [
+          // Adding the search icon here
+          IconButton(
+            icon: const Icon(Icons.search), // This is your search icon
+            iconSize: 30.0,
+            color: Colors.white,
+            onPressed: () {
+              // Handle search icon press
+              print('Search icon pressed!');
+            },
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -45,5 +56,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-
