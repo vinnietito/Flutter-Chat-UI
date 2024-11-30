@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:chatapp2/screens/home_screen.dart';
+import 'home_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,10 +12,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Chat UI',
       theme: ThemeData(
-        primaryColor: Colors.red,
+        primaryColor: Colors.red, // Primary color set here
         hintColor: const Color(0xFFFEF9EB),
       ),
-      home: HomeScreen(), // Removed const
+      home: const HomeScreen(),
     );
   }
 }
