@@ -41,16 +41,20 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: Column(
-        children: [
-          const CategorySelector(), // Assuming you had this widget
-          Expanded(
-            child: Container(
-              color: Colors.white,
-              child: const Center(
-                child: Text('Chat content here'),
+        children: <Widget>[
+          const CategorySelector(),
+          Container(
+            height: 500.0,
+            decoration: BoxDecoration(
+              color: Theme.of(context).accentColor,
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(30.0),
+                topRight: Radius.circular(30.0),
               ),
             ),
-          ),
+
+            ),
+          
         ],
       ),
     );
