@@ -54,6 +54,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 topRight: Radius.circular(30.0),
               ),
             ),
+            child: Column(
+              children: <Widget>[
+                Row(children: <Widget>[
+                  const Text('Favourites Contacts'),
+                  IconButton(
+                    icon: const Icon(
+                      Icons.more_horiz,
+                      ),
+                      onPressed: () {},
+                  ),
+                ],)
+              ],
+            ),
             ),)
         ],
       ),
