@@ -13,21 +13,23 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue, // Change the AppBar background color
         leading: IconButton(
           icon: Icon(Icons.menu),
           iconSize: 30.0,
-          color: Colors.white,
+          color: Colors.white, // Change icon color
           onPressed: () {},
-          ),
+        ),
         title: const Text(
           'Chats',
           style: TextStyle(
             fontSize: 28.0,
             fontWeight: FontWeight.bold,
+            color: Colors.white, // Change text color
           ),
         ),
       ),
-
+      body: const Center(child: Text('Home Screen Content')),
     );
   }
 }
