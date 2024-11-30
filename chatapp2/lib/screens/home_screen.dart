@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             child: const Column(
               children: <Widget>[
-                FavouriteContacts(),
+                FavoriteContacts(),
             ],
             ),
           ),
