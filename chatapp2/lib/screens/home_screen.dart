@@ -12,6 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor, // AppBar red color
         leading: IconButton(
@@ -25,13 +26,12 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(
             fontSize: 28.0,
             fontWeight: FontWeight.bold,
-            color: Colors.white, // Title text color
           ),
         ),
         actions: [
           // Adding the search icon here
           IconButton(
-            icon: const Icon(Icons.search),
+            icon: const Icon(Icons.search), // This is your search icon
             iconSize: 30.0,
             color: Colors.white,
             onPressed: () {
@@ -46,18 +46,15 @@ class _HomeScreenState extends State<HomeScreen> {
           const CategorySelector(),
           Expanded(
             child: Container(
-              height: 500.0,
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.secondary == null
-                    ? Colors.white // Fallback to white if secondary color is not defined
-                    : Theme.of(context).colorScheme.secondary, // Use secondary color from theme
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(30.0),
-                  topRight: Radius.circular(30.0),
-                ),
+            height: 500.0,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(30.0),
+                topRight: Radius.circular(30.0),
               ),
             ),
-          ),
+            ),)
         ],
       ),
     );
