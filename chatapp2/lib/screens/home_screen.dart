@@ -28,6 +28,15 @@ class _HomeScreenState extends State<HomeScreen> {
             color: Colors.white, // Change text color
           ),
         ),
+        elevation: 0.0,
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.search),
+            iconSize: 30.0,
+            color: Colors.white,
+            onPressed: () {},
+          ),
+        ],
       ),
       body: const Center(child: Text('Home Screen Content')),
     );
