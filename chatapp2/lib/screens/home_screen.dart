@@ -1,5 +1,7 @@
 import 'package:chatapp2/widgets/category_selector.dart';
 import 'package:flutter/material.dart';
+import 'package:chatapp2/widgets/favorite_contacts.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -56,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             child: const Column(
               children: <Widget>[
-                
+                FavouriteContacts(),
             ],
             ),
           ),
