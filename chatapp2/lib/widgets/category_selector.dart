@@ -19,8 +19,15 @@ class _CategorySelectorState extends State<CategorySelector> {
           scrollDirection: Axis.horizontal,
           itemCount: categories.length,
           itemBuilder: (BuildContext context, int index) {
-            return const Padding(
-              padding: EdgeInsets.symmetric(
+            return GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedIndex = index;
+                });
+              },
+              child: Padding(
+
+                padding: const EdgeInsets.symmetric(
                 horizontal: 20.0, 
                 vertical: 30.0,
               ),
@@ -31,12 +38,13 @@ class _CategorySelectorState extends State<CategorySelector> {
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1.2,
-              ),),
-            );
-            
-          },
-
-        ),
-        );
+              ),
+            ),
+              
+              ),
+          );
+        },
+      ),
+    );
   }
 }
