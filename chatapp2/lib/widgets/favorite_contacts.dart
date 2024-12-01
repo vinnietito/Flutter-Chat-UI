@@ -35,7 +35,6 @@ const FavoriteContacts({super.key});
         ),
         Container(
           height: 120.0,
-          color: Colors.blue,
           child: ListView.builder(
             padding: const EdgeInsets.only(left: 10.0),
             scrollDirection: Axis.horizontal,
