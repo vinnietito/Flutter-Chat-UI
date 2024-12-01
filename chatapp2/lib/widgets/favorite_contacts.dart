@@ -47,6 +47,7 @@ const FavoriteContacts({super.key});
                     radius: 35.0,
                     backgroundImage: AssetImage(favorites[index].imageUrl),
                     ),
+                    SizedBox(height: 6.0)
                   Text(favorites[index].name),
                 ],
               );
