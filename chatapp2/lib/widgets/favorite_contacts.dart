@@ -48,7 +48,13 @@ const FavoriteContacts({super.key});
                     backgroundImage: AssetImage(favorites[index].imageUrl),
                     ),
                     const SizedBox(height: 6.0),
-                  Text(favorites[index].name),
+                  Text(favorites[index].name, 
+                  style: const TextStyle(
+                    color: Colors.blueGrey,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w600,
+                    ),
+                  ),
                 ],
               );
             }
