@@ -56,9 +56,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 topRight: Radius.circular(30.0),
               ),
             ),
-            child: const Column(
+            child: Column(
               children: <Widget>[
-                FavoriteContacts(),
+                const FavoriteContacts(),
+                Container(
+                  height: 300.0,
+                  color: Colors.blue,
+                  )
             ],
             ),
           ),
