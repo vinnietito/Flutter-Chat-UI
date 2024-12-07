@@ -41,35 +41,11 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: Column(
+      body: const Column(
         children: <Widget>[
-          const CategorySelector(),
-          Expanded(
-            child: Container(
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30.0),
-                  topRight: Radius.circular(30.0),
-                ),
-              ),
-              child: Column(
-                children: <Widget>[
-                  const FavoriteContacts(),
-                  Expanded(
-                    child: ListView.builder(
-                      itemCount: chats.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return Text(
-                          chats[index].sender.name,
-                        );
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          FavoriteContacts(),
+          RecentChats(),
+          
         ],
       ),
     );
