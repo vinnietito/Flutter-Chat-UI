@@ -3,7 +3,6 @@ import 'package:chatapp2/widgets/category_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:chatapp2/widgets/favorite_contacts.dart';
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -17,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
-        backgroundColor: Theme.of(context).primaryColor, // AppBar red color
+        backgroundColor: Theme.of(context).primaryColor,
         leading: IconButton(
           icon: const Icon(Icons.menu),
           iconSize: 30.0,
@@ -32,13 +31,11 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         actions: [
-          // Adding the search icon here
           IconButton(
-            icon: const Icon(Icons.search), // This is your search icon
+            icon: const Icon(Icons.search),
             iconSize: 30.0,
             color: Colors.white,
             onPressed: () {
-              // Handle search icon press
               print('Search icon pressed!');
             },
           ),
@@ -49,32 +46,30 @@ class _HomeScreenState extends State<HomeScreen> {
           const CategorySelector(),
           Expanded(
             child: Container(
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30.0),
-                topRight: Radius.circular(30.0),
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30.0),
+                  topRight: Radius.circular(30.0),
+                ),
+              ),
+              child: Column(
+                children: <Widget>[
+                  const FavoriteContacts(),
+                  Expanded(
+                    child: ListView.builder(
+                      itemCount: chats.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Text(
+                          chats[index].sender.name,
+                        );
+                      },
+                    ),
+                  ),
+                ],
               ),
             ),
-            child: ListView.builder(
-              itemCount: chats.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Text(
-                  chats[index].sender.name
-                );
-              }
-            )
-            child: Column(
-              children: <Widget>[
-                const FavoriteContacts(),
-                Container(
-                  height: 300.0,
-                  color: Colors.blue,
-                  )
-            ],
-            ),
           ),
-          )
         ],
       ),
     );
