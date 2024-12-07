@@ -1,5 +1,4 @@
-import 'package:chatapp2/models/message_model.dart';
-import 'package:chatapp2/widgets/category_selector.dart';
+import 'package:chatapp2/widgets/recent_chats.dart';
 import 'package:flutter/material.dart';
 import 'package:chatapp2/widgets/favorite_contacts.dart';
 
