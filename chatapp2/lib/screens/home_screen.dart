@@ -43,7 +43,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: <Widget>[
-          FavoriteContacts(),
           const CategorySelector(),
           Expanded(
             child: Container(
