@@ -40,8 +40,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: Column(
-        children: const <Widget>[
+      body: const Column(
+        children: <Widget>[
           CategorySelector(),
           Expanded(
             child: RecentChats(),
