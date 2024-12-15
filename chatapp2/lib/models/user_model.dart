@@ -7,3 +7,4 @@ class User {
     required this.id,
     required this.name,
     required this.imageUrl,
+  });
