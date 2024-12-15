@@ -4,3 +4,4 @@ class User {
   final String imageUrl;
 
   User({
+    required this.id,
