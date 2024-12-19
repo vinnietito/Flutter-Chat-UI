@@ -8,3 +8,4 @@ class User {
     required this.name,
     required this.imageUrl,
   });
+}
